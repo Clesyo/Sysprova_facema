@@ -2,6 +2,22 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/project
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.iml
+*.eml
+/dist/
+.cache
 
 # Package Files #
 *.jar
