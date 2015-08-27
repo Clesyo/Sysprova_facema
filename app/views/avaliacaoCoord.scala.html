@@ -1,0 +1,217 @@
+@main("Avaliação do Coordenador"){
+	<!-- Inicio Menu Horizontal -->
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/"><img src="@routes.Assets.at("images/logo.png")" alt="Sysprova"></a>
+			<a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+		</div>
+
+		<ul class="nav navbar-nav collapse" id="navbar-menu">
+			<li><a href="/index"><i class="icon-home"></i> <span>Home</span></a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-address-book"></i> <span>Professor</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="cadastro_professor.html">Cadastrar</a></li>
+					<li><a href="#">Alterar</a></li>
+					<li><a href="#">Consultar</a></li>
+					<li><a href="#">Excluir</a></li>
+					
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file-plus"></i> <span>Cadastro</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right role=menu">
+				            <li><a href="/curso">Cadastrar Curso</a></li>
+					        <li><a href="/turma">Cadastrar Turma</a></li>
+					        <li><a href="/professor">Cadastrar Professor</a></li>
+					        <li><a href="/disciplina">Cadastrar Disciplina</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file6"></i> <span>Avaliação</span>  <b class="caret"></b></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">Cadastrar</a></li>
+					    <li><a href="#">Alterar</a></li>
+					    <li><a href="#">Consultar</a></li>
+					    <li><a href="#">Excluir</a></li>
+					</ul>
+			</li>
+			
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+			<li class="user dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					<img src="@routes.Assets.at("images/icone-usuario.png")" alt="">
+					<span>Fulano Facema</span>
+					<i class="caret"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right icons-right">
+					<li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+					<li><a href="#"><i class="icon-cog"></i> Configurações</a></li>
+					<li><a href="login.html"><i class="icon-exit"></i> Sair</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--  Fim Menu Horizontal -->
+
+
+	<!-- Inicio Conteudo da Página -->
+ 	<div class="page-container">
+
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<div class="sidebar-content">
+
+				<!-- dropdown Usuario -->
+				<div class="user-menu dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="@routes.Assets.at("images/icone-usuario.png")" alt="">
+						<div class="user-info">
+							Fulano Facema <span>Pofessor ADS</span>
+						</div>
+					</a>
+					<div class="popup dropdown-menu dropdown-menu-right">
+					    <div class="thumbnail">
+					    	<div class="thumb">
+								<img alt="" src="http://placehold.it/300">
+								<div class="thumb-options">
+									<span>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-pencil"></i></a>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-remove"></i></a>
+									</span>
+								</div>
+						    </div>
+					    
+					    	<div class="caption text-center">
+					    		<h6>Fulano Facema <small>Professor ADS</small></h6>
+					    	</div>
+				    	</div>
+
+				    	<ul class="list-group">
+							<li class="list-group-item"><i class="icon-pencil3 text-muted"></i> Minhas Questões <span class="label label-success">9</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Fim dropdown Usuario-->
+
+
+				<!-- Inicio Sidebar Menu Verical-->
+				<ul class="navigation">
+					<li><a href="/"><span>Home</span> <i class="icon-home"></i></a></li>
+					<li>
+						<a href="#"><span>Professor</span> <i class="icon-address-book"></i></a>
+						<ul>
+							<li><a href="cadastro_professor.html">Cadastrar</a></li>
+					        <li><a href="#">Alterar</a></li>
+					        <li><a href="#">Consultar</a></li>
+					        <li><a href="#">Excluir</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Cadastro</span> <i class="icon-file-plus"></i></a>
+						<ul>
+							<li><a href="/curso">Cadastrar Curso</a></li>
+					        <li><a href="/turma">Cadastrar Turma</a></li>
+					        <li><a href="/professor">Cadastrar Professor</a></li>
+					        <li><a href="/disciplina">Cadastrar Disciplina</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Avaliação</span> <i class="icon-file6"></i></a>
+						<ul>
+							<li><a href="cadastro_questao.html">Cadastrar</a></li>
+					        <li><a href="#">Alterar</a></li>
+					        <li><a href="#">Consultar</a></li>
+					       <li><a href="#">Excluir</a></li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Gerar Prova</span> <i class="icon-file-upload"></i></a>
+						
+					</li>
+					
+					
+					<li>
+						<a href="login.html"><i class="icon-exit"></i> Sair</a>
+					</li>
+				</ul>
+				<!-- /Fim Sidbar Menu Vertical -->
+				
+			</div>
+		</div>
+		<!-- Fim sidebar -->
+
+		<!-- Conteudo Da Pagina -->
+	 	<div class="page-content">
+
+
+			<!-- Pagina header -->
+			<div class="page-header">
+		<div class="page-title">
+					<h3>Avaliação Coordenador</h3>
+				</div>
+				<div id="reportrange" class="range">
+					<div class="visible-xs header-element-toggle">
+						<a class="btn btn-primary btn-icon"><i class="icon-calendar"></i></a>
+					</div>
+					<div class="date-range"></div>
+					<span class="label label-danger">9</span>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Linha menu guia de migalhas -->
+			<div class="breadcrumb-line">
+				<ul class="breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Cadastro</a></li>
+					<li class="active">Avaliação Coordenador</li>
+				</ul>
+
+				<div class="visible-xs breadcrumb-toggle">
+					<a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target=".breadcrumb-buttons"><i class="icon-menu2"></i></a>
+				</div>
+			</div>
+			<!-- Linha menu guia de migalhas -->
+
+           
+
+     <legend>Avaliação Coordenador</legend>
+<div class="col-sm-10">
+      @for(curso <- Curso.find.findList()){
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading"><h4>@curso.getNome()</h4></div>
+				<div class="panel-body">
+					@for(turma <- Turma.find.where().eq("curso_id_curso", curso.getIdCurso).findList()){
+
+					@if(Prova.findByIdProva(turma.getIdTurma()) != null){
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-danger"> @turma.getNome()</button>
+					<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+				@for(d <- Disciplina.find.where().eq("turma_id_turma", turma.getIdTurma()).findList()){
+					<li><a href='@routes.Avaliacao.avaliarQuestaoCoord(d.getIdDisciplina, "co")'>@d.getNome()</a></li>
+				}
+				</ul>
+				</div>
+				}
+
+					}
+				</div>
+			</div>
+		</div>
+      }
+      <div class="rodape">
+	        <div class="footer clearfix">
+		        <div class="pull-left">&copy; 2015 <a href="#"> SysProva</a> - Facema | Faculdade de Ciência e Tecnologia do Maranhão </div>	        	
+	        </div>
+	        </div>
+}

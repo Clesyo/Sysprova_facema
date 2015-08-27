@@ -1,0 +1,44 @@
+@(id: Long, form: Form[Disciplina], professor: List[Professor], turmas: List[Turma])
+
+@main("Alterar Disciplina"){
+<div class="container">
+	<div class="header">
+	<ul class="nav nav-pills pull-right">
+			<li class="active"><a href="/index">Home</a></li>
+		</ul>
+		</div>
+	@helper.form(routes.DisciplinaCrud.alterarDisciplina(id)){
+	<legend>Alterar Disciplina</legend>
+	@helper.inputText(form("nome"), '_label -> "Nome da Disciplina:")
+	
+	@helper.inputText(form("qtdQuestao"), '_label -> "Quandidade de Questão:")
+
+	@helper.inputText(form("cargaHoraria"), '_label -> "Carga Horaria:")
+	
+	<dl>
+	<dt><label for="">Professor:</label></dt>
+	<select name="idProf" >
+		@for(prof <- professor){
+		<option value="@prof.getIdProf()">@prof.getNome()</option>
+		}
+	</select>
+	</dl>
+
+	<dl>
+	<dt><label for="">Turma:</label></dt>
+	<select name="idTurma" >
+		@for(turma <- turmas){
+		<option value="@turma.getIdTurma()">@turma.getNome()</option>
+		}
+	</select>
+	</dl>
+
+	<div class="control-group">
+		  <label class="control-label" for="singlebutton"></label>
+		  <div class="controls">
+		    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Gravar</button>
+		  </div>
+		</div>
+	}
+</div>
+	}

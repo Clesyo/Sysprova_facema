@@ -1,0 +1,325 @@
+@(usuarios: List[Usuario],userForm : Form[Usuario],perfis: List[PerfilUser]) 
+
+@main("Usuário"){
+
+<!-- Inicio Menu Horizontal -->
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"><img src="@routes.Assets.at("images/logo.png")" alt="Sysprova"></a>
+			<a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+		</div>
+
+		<ul class="nav navbar-nav collapse" id="navbar-menu">
+			<li><a href="/index"><i class="icon-home"></i> <span>Home</span></a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-address-book"></i> <span>Professor</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="/professor">Cadastrar</a></li>
+					<li><a href="#">Alterar</a></li>
+					<li><a href="#">Consultar</a></li>
+					<li><a href="#">Excluir</a></li>
+					<li><a href="/listagem">Criar Questão</a></li>
+					<li><a href="/listagemCorrecao">Corrigir Questao</a></li>
+					
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file-plus"></i> <span>Cadastro</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right role=menu">
+				            <li><a href="/curso">Cadastrar Curso</a></li>
+					        <li><a href="/turma">Cadastrar Turma</a></li>
+					        <li><a href="/professor">Cadastrar Professor</a></li>
+					        <li><a href="/disciplina">Cadastrar Disciplina</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file6"></i> <span>Avaliação</span>  <b class="caret"></b></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="/prova">Cadastrar</a></li>
+					    <li><a href="#">Alterar</a></li>
+					    <li><a href="#">Consultar</a></li>
+					    <li><a href="#">Excluir</a></li>
+					</ul>
+			</li>
+			<li><a href="#"><i class="icon-file-upload"></i> <span>Gerar Prova</span></a></li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+			<li class="user dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					<img src="@routes.Assets.at("images/icone-usuario.png")" alt="">
+					<span>Fulano Facema</span>
+					<i class="caret"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right icons-right">
+					<li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+					<li><a href="#"><i class="icon-cog"></i> Configurações</a></li>
+					<li><a href="/logar"><i class="icon-exit"></i> Sair</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--  Fim Menu Horizontal -->
+
+
+	<!-- Inicio Conteudo da Página -->
+ 	<div class="page-container">
+
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<div class="sidebar-content">
+
+				<!-- dropdown Usuario -->
+				<div class="user-menu dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="@routes.Assets.at("images/icone-usuario.png")" alt="">
+						<div class="user-info">
+							Fulano Facema <span>Pofessor ADS</span>
+						</div>
+					</a>
+					<div class="popup dropdown-menu dropdown-menu-right">
+					    <div class="thumbnail">
+					    	<div class="thumb">
+								<img alt="" src="http://placehold.it/300">
+								<div class="thumb-options">
+									<span>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-pencil"></i></a>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-remove"></i></a>
+									</span>
+								</div>
+						    </div>
+					    
+					    	<div class="caption text-center">
+					    		<h6>Fulano Facema <small>Professor ADS</small></h6>
+					    	</div>
+				    	</div>
+
+				    	<ul class="list-group">
+							<li class="list-group-item"><i class="icon-pencil3 text-muted"></i> Minhas Questões <span class="label label-success">9</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Fim dropdown Usuario-->
+
+
+				<!-- Inicio Sidebar Menu Verical-->
+				<ul class="navigation">
+					<li><a href="/"><span>Home</span> <i class="icon-home"></i></a></li>
+					<li>
+						<a href="#"><span>Professor</span> <i class="icon-address-book"></i></a>
+						<ul>
+							<li><a href="/professor">Cadastrar</a></li>
+					<li><a href="#">Alterar</a></li>
+					<li><a href="#">Consultar</a></li>
+					<li><a href="#">Excluir</a></li>
+					<li><a href="/listagem">Criar Questão</a></li>
+					<li><a href="/listagemCorrecao">Corrigir Questao</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Cadastro</span> <i class="icon-file-plus"></i></a>
+						<ul>
+							<li><a href="/curso">Cadastrar Curso</a></li>
+					<li><a href="/turma">Cadastrar Turma</a></li>
+					<li><a href="/professor">Cadastrar Professor</a></li>
+					<li><a href="/disciplina">Cadastrar Disciplina</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Liberar Periodo de prova</span> <i class="icon-file6"></i></a>
+						<ul>
+							<li><a href="/prova">Cadastrar</a></li>
+					    <li><a href="#">Alterar</a></li>
+					    <li><a href="#">Consultar</a></li>
+					    <li><a href="#">Excluir</a></li>
+							
+						</ul>
+					</li>
+					<li>
+					<a href="/gerar"><span>Gerar Prova</span> <i class="icon-file-upload"></i></a>
+						
+					</li>
+					
+					
+					<li>
+						<a href="/logar"><i class="icon-exit"></i> Sair</a>
+					</li>
+				</ul>
+				<!-- /Fim Sidbar Menu Vertical -->
+				
+			</div>
+		</div>
+		<!-- Fim sidebar -->
+
+		<!-- Conteudo Da Pagina -->
+	 	<div class="page-content">
+
+
+			<!-- Pagina header -->
+			<div class="page-header">
+				<div class="page-title">
+					<h3>Ficha de Curso <small>Cadastro de Curso</small></h3>
+				</div>
+
+				<div id="reportrange" class="range">
+					<div class="visible-xs header-element-toggle">
+						<a class="btn btn-primary btn-icon"><i class="icon-calendar"></i></a>
+					</div>
+					<div class="date-range"></div>
+					<span class="label label-danger">9</span>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Linha menu guia de migalhas -->
+			<div class="breadcrumb-line">
+				<ul class="breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Cadastro</a></li>
+					<li class="active">Cadastro de Usuário</li>
+				</ul>
+
+				<div class="visible-xs breadcrumb-toggle">
+					<a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target=".breadcrumb-buttons"><i class="icon-menu2"></i></a>
+				</div>
+			</div>
+			<!-- Linha menu guia de migalhas -->
+
+            <!-- Callout -->
+			<div class="callout callout-danger fade in">
+				<button type="button" class="close" data-dismiss="alert">×</button>
+				<h5>Formulario de Cadastro de Curo</h5>
+				<p>Preencha o formulario com as informações do curso.</p>
+			</div>
+            <!-- /callout -->
+      
+      @helper.form(action=routes.UsuarioCrud.gravarUsuario()) {
+      
+	
+
+		<legend>Novo Usuário</legend>		
+		    
+
+
+           	<div class="form-group">
+								<div class="row">
+									<div class="col-md-6">
+
+									 <label for="">Matricula:</label>
+		    	                     <input type="text" name="matricula" id="matricula" class="form-control">
+									</div>
+
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-6">
+
+									 <label for="">Senha:</label>
+		                           <input type="password" name="senha" id="senha" class="form-control">
+									</div>
+
+								</div>
+							</div>
+
+		    <div class="form-group">
+								<div class="row">
+									<div class="col-md-6">
+                                    
+										<label for="">Situação:</label><br>
+		                                <select name="idperfil">
+		    	                         @for(perfil <- perfis){
+		    	                        <option value="@perfil.getIdPerfilUser()">@perfil.getDescricao() @perfil.getIdPerfilUser()</option>
+		    	                          }
+		    </select>
+		    	                          
+		    </select>
+									</div>
+
+								</div>
+							</div>
+		   
+		   
+
+		
+		
+
+		<div class="control-group">
+		  <label class="control-label" for="singlebutton"></label>
+		  <div class="controls">
+		    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Gravar</button>
+		    
+		  </div>
+		</div>
+}
+
+
+
+ <div class="panel panel-default">
+	                <div class="panel-heading"><h6 class="panel-title"><i class="icon-file-plus"></i> Lista de Turma</h6></div>
+	                <div class="panel-body">
+
+	                	<!-- Informações Gerais -->
+	                	<div class="block-inner">
+
+<h1>Lista de Usuários</h1>
+		  	<table class="table table-striped table-bordered" id="example"
+cellpadding="0" cellspacing="0" border="0" width="100%">
+		  		<thead>
+		  			<tr>
+		  				<td>Código</td>
+		  			
+		  				<td>Matricula</td>
+		  				<td>Senha</td>
+		  				<td>Perfil</td>
+		  				<td>Situação</td>
+		  				<td>Remoção</td>
+		  				
+		  			</tr>
+		  		</thead>
+		  		<tbody>
+		  		@for(user <- usuarios){
+		  			<tr>
+		  				<td><a href="@routes.UsuarioCrud.detalhar(user.getIdUsuario())">@user.getIdUsuario()</a></td>
+		  				
+		  				<td>@user.getMatricula()</td>
+
+		  				<td>@user.getSenha()</td>
+		  				<td>@PerfilUser.find.byId(user.getPerfil()).getDescricao()</td>
+		  				<td>@user.getAtivo()</td>
+		  				<td>
+		  					@helper.form(routes.UsuarioCrud.remover(user.getIdUsuario())){
+	                        <input type="submit" value="Remover" class="btn danger">
+}
+		  				</td>
+		  				
+		  			</tr>
+		  			
+		  			}
+		  		</tbody>
+		  	</table>
+		  	</div>
+						</div>
+						</div>
+
+
+
+		  	<!-- Footer -->
+	 
+	        <div class="footer clearfix">
+		        <div class="pull-left">&copy; 2015 <a href="#"> SysProva</a> - Facema | Faculdade de Ciência e Tecnologia do Maranhão </div>	        	
+	        </div>
+	        
+	        <!-- /footer --> 	 
+
+
+
+    
+  </div>
+
+
+} 

@@ -1,0 +1,198 @@
+@main("Professor"){
+<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"><img src="images/logo.png" alt="Sysprova"></a>
+			<a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+		</div>
+
+		<ul class="nav navbar-nav collapse" id="navbar-menu">
+			<li><a href="/index"><i class="icon-home"></i> <span>Home</span></a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-address-book"></i> <span>Professor</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="cadastro_professor.html">Cadastrar</a></li>
+					<li><a href="#">Alterar</a></li>
+					<li><a href="#">Consultar</a></li>
+					<li><a href="#">Excluir</a></li>
+					
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file-plus"></i> <span>Cadastro</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li class="active"><a href="cadastro_curso.html">Cadastrar Curso</a></li>
+					<li><a href="cadastro_turma.html">Cadastrar Turma</a></li>
+					<li><a href="cadastro_disciplina.html">Cadastrar Disciplina</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file6"></i> <span>Avaliação</span>  <b class="caret"></b></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="cadastro_questao.html">Cadastrar</a></li>
+					    <li><a href="#">Alterar</a></li>
+					    <li><a href="#">Consultar</a></li>
+					    <li><a href="#">Excluir</a></li>
+					</ul>
+			</li>
+			<li><a href="#"><i class="icon-file-upload"></i> <span>Gerar Prova</span></a></li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+			<li class="user dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					<img src="images/icone-usuario.png" alt="">
+					<span>Fulano Facema</span>
+					<i class="caret"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right icons-right">
+					<li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+					<li><a href="#"><i class="icon-cog"></i> Configurações</a></li>
+					<li><a href="login.html"><i class="icon-exit"></i> Sair</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--  Fim Menu Horizontal -->
+<!-- ================================================-->
+
+<!-- Inicio Conteudo da Página -->
+ 	<div class="page-container">
+
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<div class="sidebar-content">
+
+				<!-- dropdown Usuario -->
+				<div class="user-menu dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="images/icone-usuario.png" alt="">
+						<div class="user-info">
+							Fulano Facema <span>Pofessor ADS</span>
+						</div>
+					</a>
+					<div class="popup dropdown-menu dropdown-menu-right">
+					    <div class="thumbnail">
+					    	<div class="thumb">
+								<img alt="" src="http://placehold.it/300">
+								<div class="thumb-options">
+									<span>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-pencil"></i></a>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-remove"></i></a>
+									</span>
+								</div>
+						    </div>
+					    
+					    	<div class="caption text-center">
+					    		<h6>Fulano Facema <small>Professor ADS</small></h6>
+					    	</div>
+				    	</div>
+
+				    	<ul class="list-group">
+							<li class="list-group-item"><i class="icon-pencil3 text-muted"></i> Minhas Questões <span class="label label-success">9</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Fim dropdown Usuario-->
+
+
+				<!-- Inicio Sidebar Menu Verical-->
+				<ul class="navigation">
+					<li><a href="index.html"><span>Home</span> <i class="icon-home"></i></a></li>
+					<li>
+						<a href="#"><span>Professor</span> <i class="icon-address-book"></i></a>
+						<ul>
+							<li><a href="cadastro_professor.html">Cadastrar</a></li>
+					        <li><a href="#">Alterar</a></li>
+					        <li><a href="#">Consultar</a></li>
+					        <li><a href="#">Excluir</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Cadastro</span> <i class="icon-file-plus"></i></a>
+						<ul>
+							<li class="active"><a href="cadastro_curso.html">Cadastrar Curso</a></li>
+					        <li><a href="cadastro_turma.html">Cadastrar Turma</a></li>
+					        <li><a href="cadastro_disciplina.html">Cadastrar Disciplina</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Avaliação</span> <i class="icon-file6"></i></a>
+						<ul>
+							<li><a href="cadastro_questao.html">Cadastrar</a></li>
+					        <li><a href="#">Alterar</a></li>
+					        <li><a href="#">Consultar</a></li>
+					       <li><a href="#">Excluir</a></li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Gerar Prova</span> <i class="icon-file-upload"></i></a>
+						
+					</li>
+					
+					
+					<li>
+						<a href="login.html"><i class="icon-exit"></i> Sair</a>
+					</li>
+				</ul>
+				<!-- /Fim Sidbar Menu Vertical -->
+				
+			</div>
+		</div>
+		<!-- Fim sidebar -->
+<div class="page-content">
+
+
+			<!-- Pagina header -->
+			<div class="page-header">
+				<div class="page-title">
+					<h3>Ficha de Questões/Correção de Questões</h3>
+				</div>
+
+				<div id="reportrange" class="range">
+					<div class="visible-xs header-element-toggle">
+						<a class="btn btn-primary btn-icon"><i class="icon-calendar"></i></a>
+					</div>
+					<div class="date-range"></div>
+					<span class="label label-danger">9</span>
+				</div>
+			</div>
+			<!-- /page header -->
+
+			<div class="breadcrumb-line">
+				<ul class="breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Professor</a></li>
+					<li class="active">Opção de questões</li>
+				</ul>
+
+				<div class="visible-xs breadcrumb-toggle">
+					<a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target=".breadcrumb-buttons"><i class="icon-menu2"></i></a>
+				</div>
+			</div>
+	
+</div>
+
+
+	<div class="container">
+	<div class="row">
+
+	<div class="col-md-2"></div>
+	
+	<div class="col-md-8">
+     <div class="btn-group btn-group-justified">
+     
+	  <div class="btn-group">
+	    	<a href="/listagem" class="btn btn-primary" role="button">Elaborar Questões</a>
+	  </div>
+
+	  	<div class="btn-group">
+	    	 <a href="/listagemCorrecao" class="btn btn-primary" role="button">Corrigir Questões</a>
+	  </div>
+	  </div>
+	  
+	</div>
+	</div>
+	</div>
+}

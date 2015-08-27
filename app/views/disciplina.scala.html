@@ -1,0 +1,319 @@
+@(professor: List[Professor], turmas: List[Turma], disciplinas: List[Disciplina])
+
+@main("Lista de Disciplinas"){
+<!-- Inicio Menu Horizontal -->
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/"><img src="@routes.Assets.at("images/logo.png")" alt="Sysprova"></a>
+			<a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+		</div>
+
+		<ul class="nav navbar-nav collapse" id="navbar-menu">
+			<li><a href="/index"><i class="icon-home"></i> <span>Home</span></a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-address-book"></i> <span>Professor</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="/professor">Cadastrar</a></li>
+					<li><a href="#">Alterar</a></li>
+					<li><a href="#">Consultar</a></li>
+					<li><a href="#">Excluir</a></li>
+					<li><a href="/listagem">Criar Questão</a></li>
+					<li><a href="/listagemCorrecao">Corrigir Questao</a></li>
+					
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file-plus"></i> <span>Cadastro</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right">s
+					<li><a href="/curso">Cadastrar Curso</a></li>
+					        <li><a href="/turma">Cadastrar Turma</a></li>
+					        <li><a href="/professor">Cadastrar Professor</a></li>
+					        <li><a href="/disciplina">Cadastrar Disciplina</a></li>
+				</ul>
+			</li>
+	<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file6"></i> <span> Liberar Periodo de prova</span>  <b class="caret"></b></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="/prova">Cadastrar</a></li>
+					    <li><a href="#">Alterar</a></li>
+					    <li><a href="#">Consultar</a></li>
+					    <li><a href="#">Excluir</a></li>
+					</ul>
+			</li>
+			<li><a href="#"><i class="icon-file-upload"></i> <span>Gerar Prova</span></a></li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+			<li class="user dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					<img src="@routes.Assets.at("images/icone-usuario.png")" alt="">
+					<span>Fulano Facema</span>
+					<i class="caret"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right icons-right">
+					<li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+					<li><a href="#"><i class="icon-cog"></i> Configurações</a></li>
+					<li><a href="login.html"><i class="icon-exit"></i> Sair</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--  Fim Menu Horizontal -->
+
+	<!-- Inicio Conteudo da Página -->
+ 	<div class="page-container">
+
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<div class="sidebar-content">
+
+				<!-- dropdown Usuario -->
+				<div class="user-menu dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="@routes.Assets.at("images/icone-usuario.png")" alt="">
+						<div class="user-info">
+							Fulano Facema <span>Pofessor ADS</span>
+						</div>
+					</a>
+					<div class="popup dropdown-menu dropdown-menu-right">
+					    <div class="thumbnail">
+					    	<div class="thumb">
+								<img alt="" src="http://placehold.it/300">
+								<div class="thumb-options">
+									<span>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-pencil"></i></a>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-remove"></i></a>
+									</span>
+								</div>
+						    </div>
+					    
+					    	<div class="caption text-center">
+					    		<h6>Fulano Facema <small>Professor ADS</small></h6>
+					    	</div>
+				    	</div>
+
+				    	<ul class="list-group">
+							<li class="list-group-item"><i class="icon-pencil3 text-muted"></i> Minhas Questões <span class="label label-success">9</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Fim dropdown Usuario-->
+
+
+				<!-- Inicio Sidebar Menu Verical-->
+				<ul class="navigation">
+					<li><a href="/"><span>Home</span> <i class="icon-home"></i></a></li>
+					<li>
+						<a href="#"><span>Professor</span> <i class="icon-address-book"></i></a>
+						<ul>
+							<li><a href="cadastro_professor.html">Cadastrar</a></li>
+					        <li><a href="#">Alterar</a></li>
+					        <li><a href="#">Consultar</a></li>
+					        <li><a href="#">Excluir</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Cadastro</span> <i class="icon-file-plus"></i></a>
+						<ul>
+							<li><a href="/curso">Cadastrar Curso</a></li>
+					        <li><a href="/turma">Cadastrar Turma</a></li>
+					        <li><a href="/professor">Cadastrar Professor</a></li>
+					        <li class="active"><a href="/disciplina">Cadastrar Disciplina</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Avaliação</span> <i class="icon-file6"></i></a>
+						<ul>
+							<li><a href="cadastro_questao.html">Cadastrar</a></li>
+					        <li><a href="#">Alterar</a></li>
+					        <li><a href="#">Consultar</a></li>
+					       <li><a href="#">Excluir</a></li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Gerar Prova</span> <i class="icon-file-upload"></i></a>
+						
+					</li>
+					
+					
+					<li>
+						<a href="login.html"><i class="icon-exit"></i> Sair</a>
+					</li>
+				</ul>
+				<!-- /Fim Sidbar Menu Vertical -->
+				
+			</div>
+		</div>
+		<!-- Fim sidebar -->
+
+
+		<!-- Conteudo Da Pagina -->
+	 	<div class="page-content">
+
+
+			<!-- Pagina header -->
+			<div class="page-header">
+				<div class="page-title">
+					<h3>Ficha de Disciplina <small>Cadastro de Disciplina</small></h3>
+				</div>
+
+				<div id="reportrange" class="range">
+					<div class="visible-xs header-element-toggle">
+						<a class="btn btn-primary btn-icon"><i class="icon-calendar"></i></a>
+					</div>
+					<div class="date-range"></div>
+					<span class="label label-danger">9</span>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Linha menu guia de migalhas -->
+			<div class="breadcrumb-line">
+				<ul class="breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Cadastro</a></li>
+					<li class="active">Cadastro de Disciplina</li>
+				</ul>
+
+				<div class="visible-xs breadcrumb-toggle">
+					<a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target=".breadcrumb-buttons"><i class="icon-menu2"></i></a>
+				</div>
+			</div>
+			<!-- Linha menu guia de migalhas -->
+
+            <!-- Callout -->
+			<div class="callout callout-danger fade in">
+				<button type="button" class="close" data-dismiss="alert">×</button>
+				<h5>Formulario de Cadastro de Disciplina</h5>
+				<p>Preencha o formulario com as informações da Disciplina.</p>
+			</div>
+            <!-- /callout -->
+
+	@helper.form(action=routes.DisciplinaCrud.gravarDisciplina()){
+	<form class="validate" action="#" role="form">
+	            <div class="panel panel-default">
+	                <div class="panel-heading"><h6 class="panel-title"><i class="icon-file-plus"></i> Cadastro</h6></div>
+	                <div class="panel-body">
+
+	                	<!-- Informações Gerais -->
+	                	<div class="block-inner">
+		                	<div class="block-inner">
+								<h6 class="heading-hr">
+									<i class="icon-certificate"></i> Informações da Disciplina <small class="display-block">Preencha as o formulario com as informações da disciplina</small>
+								</h6>
+							</div>
+
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-4">
+										<label>Nome:</label>
+		                                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome">
+									</div>
+                                   <div class="col-md-4">
+										<label>Quantidade de Questões: </label><br>
+		                                <input class="form-control" type="number" name="qtdQuestao" id="qtdQuestao">
+									</div>
+									<div class="col-md-4">
+                                       <label for="cargaHoraria">Carga Horária:</label>
+		                              <input class="form-control" type="text" name="cargaHoraria" id="cargaHoraria">
+									</div>
+
+								</div>
+							</div>
+                          
+						</div>
+						<!-- Fim Informações Gerais-->
+
+						<div class="form-group">
+							<div class="row">
+									<div class="col-md-6">
+										<label for="">Turmas:</label><br>
+	                                    <select name="idTurma" >
+		                                @for(turma <- turmas){
+		                                <option value="@turma.getIdTurma()">@turma.getNome()</option>
+		                                }
+	                                  </select>
+									</div>
+
+									<div class="col-md-6">
+										<label>Professor: </label><br>
+		                                <select name="idProf" >
+		                                @for(prof <- professor){
+	                                 	<option value="@prof.getIdProf()">@prof.getNome()</option>
+	                                  	}
+	</select>
+									</div>
+								</div>
+								</div>
+								
+                        <div class="form-actions text-right">
+                        	<input type="reset" value="Cancelar" class="btn btn-danger">
+                        	<input type="submit" value="Salvar" class="btn btn-primary">
+                        </div>
+
+					</div>
+				</div>
+			</form>
+			<!-- Fim Formulario de Cadastro de Professor -->
+	}
+	
+	<hr>
+
+		  	<div class="panel panel-default">
+	                <div class="panel-heading"><h6 class="panel-title"><i class="icon-file-plus"></i> Lista de Disciplinas</h6></div>
+	                <div class="panel-body">
+
+	                	<!-- Informações Gerais -->
+	                	<div class="block-inner">
+
+		  	<table class="table table-striped table-bordered" id="example"
+cellpadding="0" cellspacing="0" border="0" width="100%">
+		  		<thead>
+		  			<tr>
+		  				<td>Codigo</td>
+		  				<td>Descrição</td>
+		  				<td>Quant. Questões</td>
+		  				<td>Carga Horaria</td>
+		  				<td>Professor</td>
+		  				<td>Turma</td>
+		  				<td>Ação Editar</td>
+		  				<td>Ação Remover</td>
+		  			</tr>
+		  		</thead>
+		  		<tbody>
+		  		@for(discip <- disciplinas){
+		  			<tr>
+		  				<td>@discip.getIdDisciplina()</td>
+		  				<td>@discip.getNome()</td>
+		  				<td>@discip.getQtdQuestao()</td>
+		  				<td>@discip.getCargaHoraria()</td>
+		  				<td>@Professor.find.byId(discip.getIdProfessor()).getNome()</td>
+		  				<td>@Turma.find.byId(discip.getIdTurma()).getNome()</td>
+		  				<td>
+		  				@helper.form(routes.DisciplinaCrud.detalharDisciplina(discip.getIdDisciplina())){
+		  				<input type="submit" value="Editar" class="btn btn-info">
+		  				}
+		  				</td>
+		  				<td>
+		  				@helper.form(routes.DisciplinaCrud.removerDisciplina(discip.getIdDisciplina())){
+		  				<input type="submit" value="Remover" class="btn btn-danger">
+		  				}
+		  				</td>
+		  			</tr>
+		  			}
+		  		</tbody>
+		  	</table>
+		  	</div>
+						</div>
+						</div>
+						<!-- Footer -->
+	 <div class="rodape">
+	        <div class="footer clearfix">
+		        <div class="pull-left">&copy; 2015 <a href="#"> SysProva</a> - Facema | Faculdade de Ciência e Tecnologia do Maranhão </div>	        	
+	        </div>
+	        </div>
+	        <!-- /footer -->
+}

@@ -1,0 +1,28 @@
+@(id:Long,userForm:Form[Usuario]) 
+@import helper._
+
+@main("Alterar Usuário"){
+<div class="container">
+<div class="header">
+	<ul class="nav nav-pills pull-right">
+			<li class="active"><a href="/index">Home</a></li>
+		</ul>
+		<h1>Alterar Professor</h1>
+		@form(routes.UsuarioCrud.alterarUsuario(id)){
+		
+			@inputText(userForm("nome"), '_label -> "Nome:")
+			@inputText(userForm("matricula"), '_label -> "Matricula:")
+			@inputPassword(userForm("senha"), '_label -> "Senha:")
+		
+        <div class="control-group">
+			<div class="actions">
+				<input type="submit" value="Gravar" class="btn btn-primary">
+				<a href="@routes.ProfessorCrud.listarProfessor()" class="btn btn-primary">
+					Cancelar
+				</a>
+	}
+	
+</div>
+</div>	
+</div>
+}

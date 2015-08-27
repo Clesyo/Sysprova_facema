@@ -1,0 +1,219 @@
+@(provas: List[Prova])
+@main("Prova"){
+
+<!-- Inicio Menu Horizontal -->
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/"><img src="@routes.Assets.at("images/logo.png")" alt="Sysprova"></a>
+			<a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+		</div>
+
+		<ul class="nav navbar-nav collapse" id="navbar-menu">
+			<li><a href="/index"><i class="icon-home"></i> <span>Home</span></a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-address-book"></i> <span>Professor</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="/professor">Cadastrar</a></li>
+					<li><a href="#">Alterar</a></li>
+					<li><a href="#">Consultar</a></li>
+					<li><a href="#">Excluir</a></li>
+					<li><a href="/listagem">Criar Questão</a></li>
+					<li><a href="/listagemCorrecao">Corrigir Questao</a></li>
+					
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file-plus"></i> <span>Cadastro</span> <b class="caret"></b></a>
+				<ul class="dropdown-menu dropdown-menu-right role=menu">
+				            <li><a href="/curso">Cadastrar Curso</a></li>
+					        <li><a href="/turma">Cadastrar Turma</a></li>
+					        <li><a href="/professor">Cadastrar Professor</a></li>
+					        <li><a href="/disciplina">Cadastrar Disciplina</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file6"></i> <span> Liberar Periodo de prova</span>  <b class="caret"></b></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="/prova">Cadastrar</a></li>
+					    <li><a href="#">Alterar</a></li>
+					    <li><a href="#">Consultar</a></li>
+					    <li><a href="#">Excluir</a></li>
+					</ul>
+			</li>
+			<li><a href="/gerar"><i class="icon-file-upload"></i> <span>Gerar Prova</span></a></li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+			<li class="user dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					<img src="@routes.Assets.at("images/icone-usuario.png")" alt="">
+					<span>Fulano Facema</span>
+					<i class="caret"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right icons-right">
+					<li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+					<li><a href="#"><i class="icon-cog"></i> Configurações</a></li>
+					<li><a href="login.html"><i class="icon-exit"></i> Sair</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--  Fim Menu Horizontal -->
+
+
+	<!-- Inicio Conteudo da Página -->
+ 	<div class="page-container">
+
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<div class="sidebar-content">
+
+				<!-- dropdown Usuario -->
+				<div class="user-menu dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="@routes.Assets.at("images/icone-usuario.png")"  alt="">
+						<div class="user-info">
+							Fulano Facema <span>Pofessor ADS</span>
+						</div>
+					</a>
+					<div class="popup dropdown-menu dropdown-menu-right">
+					    <div class="thumbnail">
+					    	<div class="thumb">
+								<img alt="" src="http://placehold.it/300">
+								<div class="thumb-options">
+									<span>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-pencil"></i></a>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-remove"></i></a>
+									</span>
+								</div>
+						    </div>
+					    
+					    	<div class="caption text-center">
+					    		<h6>Fulano Facema <small>Professor ADS</small></h6>
+					    	</div>
+				    	</div>
+
+				    	<ul class="list-group">
+							<li class="list-group-item"><i class="icon-pencil3 text-muted"></i> Minhas Questões <span class="label label-success">9</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Fim dropdown Usuario-->
+
+
+				<!-- Inicio Sidebar Menu Verical-->
+				<ul class="navigation">
+					<li><a href="/"><span>Home</span> <i class="icon-home"></i></a></li>
+					<li>
+						<a href="#"><span>Professor</span> <i class="icon-address-book"></i></a>
+						<ul>
+							<li><a href="/professor">Cadastrar</a></li>
+					<li><a href="#">Alterar</a></li>
+					<li><a href="#">Consultar</a></li>
+					<li><a href="#">Excluir</a></li>
+					<li><a href="/listagem">Criar Questão</a></li>
+					<li><a href="/listagemCorrecao">Corrigir Questao</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Cadastro</span> <i class="icon-file-plus"></i></a>
+						<ul>
+							<li><a href="/curso">Cadastrar Curso</a></li>
+					<li><a href="/turma">Cadastrar Turma</a></li>
+					<li><a href="/professor">Cadastrar Professor</a></li>
+					<li><a href="/disciplina">Cadastrar Disciplina</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Liberar Periodo de prova</span> <i class="icon-file6"></i></a>
+						<ul>
+							<li><a href="/prova">Cadastrar</a></li>
+					    <li><a href="#">Alterar</a></li>
+					    <li><a href="#">Consultar</a></li>
+					    <li><a href="#">Excluir</a></li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="/gerar"><span>Gerar Prova</span> <i class="icon-file-upload"></i></a>
+						
+					</li>
+					
+					
+					<li>
+						<a href="login.html"><i class="icon-exit"></i> Sair</a>
+					</li>
+				</ul>
+				<!-- /Fim Sidbar Menu Vertical -->
+				
+			</div>
+		</div>
+		<!-- Fim sidebar -->
+<div class="page-content">
+	
+     <legend>Liberar nova Prova</legend>
+	@helper.form(action=routes.ProvaCrud.gravarProva()){
+	
+	            <div class="panel panel-default">
+	                <div class="panel-heading"><h6 class="panel-title"><i class="icon-file-plus"></i> Cadastrar Intervalo de prova</h6></div>
+	                <div class="panel-body">
+	<dl>
+		<dt><label for="dataInicial">Data Inicial:</label></dt>
+		<dd class="col-cmd-4"><input type="date" name="dataInicial" id="dataInicial"></dd>
+	</dl>
+
+	<dl>
+		<dt><label for="dataFinal">Data Final:</label></dt>
+		<dd><input type="date" name="dataFinal" id="dataFinal"></dd>
+	</dl>
+
+	<div class="control-group">
+		  <label class="control-label" for="singlebutton"></label>
+		  <div class="controls">
+		    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Gravar</button>
+		  </div>
+		</div>
+		</div>
+		</div>
+
+
+
+	}
+
+<div class="panel panel-default">
+	                <div class="panel-heading"><h6 class="panel-title"><i class="icon-file-plus"></i> Lista de Provas Cadastradas</h6></div>
+	                <div class="panel-body">
+
+	                	<!-- Informações Gerais -->
+	                	<div class="block-inner">
+	<hr>
+	<h1>Lista de Provas</h1>
+	<table class="table table-striped table-bordered" id="example"
+cellpadding="0" cellspacing="0" border="0" width="100%">
+		  		<thead>
+		  			<tr>
+		  				<td>Código</td>
+		  				<td>Turma</td>
+		  				<td>Data de Inicio</td>
+		  				<td>Data de Encerramento</td>
+		  				
+		  			</tr>
+		  		</thead>
+		  		<tbody>
+		  		@for(prova <- provas){
+		  			<tr>
+		  				<td>@prova.getIdProva()</td>
+		  				<td>@Turma.find.byId(prova.getIdTurma()).getNome()</td>
+		  				<td>@prova.getDataInicial()</td>
+		  				<td>@prova.getDataFinal()</td>
+		  				
+		  			</tr>
+		  			}
+		  		</tbody>
+		  	</table>
+		  	</div>
+						</div>
+						</div>
+		  	</div>
+}

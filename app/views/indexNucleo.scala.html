@@ -1,0 +1,203 @@
+@main("Pagina Incial") {
+
+ <!-- Inicio Menu Horizontal -->
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/"><img src="@routes.Assets.at("images/logo.png")" alt="Sysprova"></a>
+			<a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+		</div>
+
+		<ul class="nav navbar-nav collapse" id="navbar-menu">
+			<li><a href="/index"><i class="icon-home"></i> <span>Home</span></a></li>
+			
+			<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-file6"></i> <span> Núcleo de Avaliação</span>  <b class="caret"></b></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="/prova">Corrigir</a></li>
+					    <li><a href="#">Consultar</a></li>
+					   
+					</ul>
+			</li>
+			
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+			<li class="user dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					<img src="@routes.Assets.at("images/icone-usuario.png")" alt="">
+					<span>Fulano Facema</span>
+					<i class="caret"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-right icons-right">
+					<li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+					<li><a href="#"><i class="icon-cog"></i> Configurações</a></li>
+					<li><a href="/logar"><i class="icon-exit"></i> Sair</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--  Fim Menu Horizontal -->
+
+
+	<!-- Inicio Conteudo da Página -->
+ 	<div class="page-container">
+
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<div class="sidebar-content">
+
+				<!-- dropdown Usuario -->
+				<div class="user-menu dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="@routes.Assets.at("images/icone-usuario.png")" alt="">
+						<div class="user-info">
+							Fulano Facema <span>Pofessor ADS</span>
+						</div>
+					</a>
+					<div class="popup dropdown-menu dropdown-menu-right">
+					    <div class="thumbnail">
+					    	<div class="thumb">
+								<img alt="" src="http://placehold.it/300">
+								<div class="thumb-options">
+									<span>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-pencil"></i></a>
+										<a href="#" class="btn btn-icon btn-success"><i class="icon-remove"></i></a>
+									</span>
+								</div>
+						    </div>
+					    
+					    	<div class="caption text-center">
+					    		<h6>Fulan Facema <small>Professor ADS</small></h6>
+					    	</div>
+				    	</div>
+
+				    	<ul class="list-group">
+							<li class="list-group-item"><i class="icon-pencil3 text-muted"></i> Minhas Questões <span class="label label-success">9</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Fim dropdown Usuario-->
+
+
+				<!-- Inicio Sidebar Menu Verical-->
+				<ul class="navigation">
+					<li><a href="/"><span>Home</span> <i class="icon-home"></i></a></li>
+					
+					<li>
+						<a href="#"><span>Nucleo de Avaliação</span> <i class="icon-file6"></i></a>
+						<ul>
+							<li><a href="/prova">Corrigir</a></li>
+					    <li><a href="#">Consultar</a></li>
+					  
+							
+						</ul>
+					</li>
+					
+					<li>
+						<a href="/logar"><i class="icon-exit"></i> Sair</a>
+					</li>
+				</ul>
+				<!-- /Fim Sidbar Menu Vertical -->
+				
+			</div>
+		</div>
+		<!-- Fim sidebar -->
+
+
+		<!-- Conteudo Da Pagina -->
+	 	<div class="page-content">
+
+
+			<!-- Pagina header -->
+			<div class="page-header">
+				<div class="page-title">
+					<h3><img src="@routes.Assets.at("images/sysprova-facema.png")" alt="SysProva"> <small>Seja Bem Vindo ao Sistema SysProva</small></h3>
+				</div>
+
+				<div id="reportrange" class="range">
+					<div class="visible-xs header-element-toggle">
+						<a class="btn btn-primary btn-icon"><i class="icon-calendar"></i></a>
+					</div>
+					<div class="date-range"></div>
+					<span class="label label-danger">9</span>
+				</div>
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Linha menu guia de migalhas -->
+			<div class="breadcrumb-line">
+				<ul class="breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li class="active">Painel de Controle</li>
+				</ul>
+
+				<div class="visible-xs breadcrumb-toggle">
+					<a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target=".breadcrumb-buttons"><i class="icon-menu2"></i></a>
+				</div>
+			</div>
+			<!-- Linha menu guia de migalhas -->
+
+	
+			<!-- Info blocks -->
+			<ul class="info-blocks">
+				<li class="bg-primary">
+					<div class="top-info">
+						<a href="/listagem">Adicionar Questão</a>
+						<small>Adicionar Nova Questão</small>
+					</div>
+					<a href="cadastro_questao.html"><i class="icon-pencil"></i></a>
+					<span class="bottom-info bg-danger">Questões Da Avaliação</span>
+				</li>
+				<li class="bg-success">
+					<div class="top-info">
+						<a href="#">Alterar Questões</a>
+						<small>Alterar Questões Cadastradas</small>
+					</div>
+					<a href="#"><i class="icon-cogs"></i></a>
+					<span class="bottom-info bg-primary">Questões Cadastras</span>
+				</li>
+				<li class="bg-info">
+					<div class="top-info">
+						<a href="avCoord">Correção de Questão</a>
+						<small>Coordenação</small>
+					</div>
+					<a href="avCoord"><i class="icon-eye3"></i></a>
+					<span class="bottom-info bg-primary">Correção Coordenação</span>
+				</li>
+				<li class="bg-danger">
+					<div class="top-info">
+						<a href="avNucleo">Correção de Questão</a>
+						<small>Núcleo de Avaliação</small>
+					</div>
+					<a href="avNucleo"><i class="icon-eye3"></i></a>
+					<span class="bottom-info bg-primary">Correção Núcleo</span>
+				</li>
+				<li class="bg-warning">
+					<div class="top-info">
+						<a href="#">Professor</a>
+						<small>Lista de Professores</small>
+					</div>
+					<a href="#"><i class="icon-profile"></i></a>
+					<span class="bottom-info bg-primary">Lista de Cadastro</span>
+				</li>
+				
+			</ul>
+			<!-- /info blocks -->  
+	        
+	<!-- Fim conteudo cental -->
+
+	 <!-- Footer -->
+	 <div class="rodape">
+	        <div class="footer clearfix">
+		        <div class="pull-left">&copy; 2015 <a href="#"> SysProva</a> - Facema | Faculdade de Ciência e Tecnologia do Maranhão </div>	        	
+	        </div>
+	        </div>
+	        <!-- /footer --> 	       
+		</div>
+		<!-- Fim pagina de conteudo -->
+	</div>
+
+
+}

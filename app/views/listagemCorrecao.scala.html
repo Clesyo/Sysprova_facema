@@ -1,0 +1,62 @@
+
+
+@main("Listagem para Correção"){
+
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="/index">Home</a></li>
+        </ul>
+      </div>
+<!-- ================================================-->
+
+<legend>Turmas</legend>
+  
+  
+
+	@for(curso <- Curso.find.findList()){
+	<div class="row">
+	  <div class="panel panel-default">
+	  
+	  	<div class="panel-heading"><h4>@curso.getNome()</h4></div>
+	  	<div class="panel-body">
+	  	
+	  	
+	  		@for(turma <- Turma.find.where().eq("curso_id_curso", curso.getIdCurso).findList()){
+		
+			@if(Prova.findByIdProva(turma.getIdTurma()) != null){
+			
+			<div class="btn-group">
+			  <button type="button" class="btn btn-danger"> @turma.getNome()</button>
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+				@for(d <- Disciplina.find.where().eq("turma_id_turma", turma.getIdTurma()).findList()){
+				
+				
+					
+					<li ><a href="@routes.Avaliacao.corrigirQuestao(d.getIdDisciplina())">@d.getNome()
+					</a></li>
+					
+    
+
+					}
+				</ul>
+			
+			 </div>
+	    	}
+
+	    	}
+	   
+	    
+	    </div>
+	  
+	    	
+	  </div>  
+	</div>
+	  }
+
+
+
+
+}

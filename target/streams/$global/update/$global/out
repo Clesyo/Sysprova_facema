@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/C:/Users/Clesyo%20Silva/Documents/GitHub/Sysprova_facema/}sysprova_facema...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/C:/Users/Clesyo%20Silva/git/Sysprova_facema/}sysprova_facema...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3e80e695[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7ca2a18e[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -5096,7 +5096,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->optional(default)][0m
-[0m[[0mdebug[0m] [0m	resolved ivy file produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\sysprova_facema\sysprova_facema_2.10\1.0-SNAPSHOT\resolved.xml.xml[0m
+[0m[[0mdebug[0m] [0m	resolved ivy file produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\sysprova_facema\sysprova_facema_2.10\1.0-SNAPSHOT\resolved.xml.xml[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.3!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-jdbc_2.10;2.2.6!play-java-jdbc_2.10.jar[0m
@@ -5223,19 +5223,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.3!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4204ms :: artifacts dl 325ms[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT compile produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT runtime produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT test produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT provided produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT optional produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT compile-internal produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT runtime-internal produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT test-internal produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT plugin produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT sources produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT docs produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT pom produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT scala-tool produced in C:\Users\Clesyo Silva\Documents\GitHub\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (4204ms resolve - 325ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4325ms :: artifacts dl 719ms[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT compile produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT runtime produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT test produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT provided produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT optional produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT compile-internal produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT runtime-internal produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT test-internal produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT plugin produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT sources produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT docs produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT pom produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for sysprova_facema#sysprova_facema_2.10;1.0-SNAPSHOT scala-tool produced in C:\Users\Clesyo Silva\git\Sysprova_facema\target\resolution-cache\reports\sysprova_facema-sysprova_facema_2.10-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (4325ms resolve - 719ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -1,0 +1,79 @@
+@(form: Form[Usuario])
+@import javax.servlet.http.HttpSession;
+@main("Login"){
+
+	<!-- Inicio Menu Horizontal -->
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-right">
+				
+				<i class="icon-grid3"></i>
+			</button>
+			<a class="navbar-brand" href="#"><img src="@routes.Assets.at("images/logo.png")" alt="SysProva"></a>
+		</div>
+
+		<ul class="nav navbar-nav navbar-right collapse">
+			<li><a href="#"><i class="icon-screen2"></i></a></li>
+			<li><a href="#"><i class="icon-paragraph-justify2"></i></a></li>
+			<li>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs"></i></a>
+                <ul class="dropdown-menu icons-right dropdown-menu-right">
+					
+                </ul>
+			</li>
+		</ul>
+	</div>
+	<!-- Fim Menu Horizontal -->
+
+@helper.form(action=routes.UsuarioCrud.login()){
+@session().clear();
+<!-- Login wrapper -->
+	<div class="login-wrapper">
+    	<form action="" role="form" method="post">
+			<div class="popup-header">
+				<a href="#" class="pull-left"><i class="icon-user-plus"></i></a>
+				<span class="text-semibold">Login de Usúario</span>
+				<div class="btn-group pull-right">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs"></i></a>
+                    <ul class="dropdown-menu icons-right dropdown-menu-right">
+						<li><a href="#"><i class="icon-people"></i> Alterar usuário</a></li>
+						<li><a href="#"><i class="icon-info"></i>Esqueceu a senha?</a></li>
+						<li><a href="#"><i class="icon-support"></i>Contato com Admin.</a></li>
+						<li><a href="#"><i class="icon-wrench"></i> Configurações</a></li>
+                    </ul>
+				</div>
+			</div>
+			<div class="well">
+				<div class="form-group has-feedback">
+					<label>Matricula</label>
+					<input type="text" name="matricula" id="matricula" class="form-control" placeholder="Matricula">
+					<i class="icon-users form-control-feedback"></i>
+				</div>
+
+				<div class="form-group has-feedback">
+					<label>Senha</label>
+					<input name="senha" type="password" id="senha" class="form-control" placeholder="Senha">
+					<i class="icon-lock form-control-feedback"></i>
+				</div>
+
+				<div class="row form-actions">
+					<div class="col-xs-6">
+						<div class="checkbox checkbox-success">
+						<label>
+							<input type="checkbox" class="styled">
+							Lembre-me
+						</label>
+						</div>
+					</div>
+
+					<div class="col-xs-6">
+						<button type="submit" class="btn btn-warning pull-right"><i class="icon-menu2"></i> Entrar</button>
+					</div>
+				</div>
+			</div>
+    	</form>
+	</div>  
+	<!-- /login wrapper -->
+
+}
+}

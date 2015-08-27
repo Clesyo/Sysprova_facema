@@ -1,0 +1,45 @@
+@(id:Long, cursos: List[Curso],professorForm:Form[Professor]) 
+
+
+@main("Alterar Professor"){
+		<div class="container">
+		<div class="header">
+		<ul class="nav nav-pills pull-right">
+			<li class="active"><a href="/index">Home</a></li>
+		</ul>
+		</div>
+		
+		@helper.form(routes.ProfessorCrud.alterarProfessor(id)){
+		<legend>Alterar Professor</legend>
+		<fieldset>
+			@helper.inputText(professorForm("nome"), '_label -> "Nome do Professor")
+			@helper.inputText(professorForm("matricula"), '_label -> "Matricula:")
+			@helper.inputText(professorForm("cpf"), '_label -> "CPF")
+			@helper.inputText(professorForm("email"), '_label -> "Email")
+			@helper.inputPassword(professorForm("senha"), '_label -> "Senha:")
+
+			<dl>
+		  <dt><label for="idCurso">Cursos:</label></dt>
+		    <select name="idCurso" id="idCurso">
+		  	  @for(curso <- cursos){
+		  	  <option value="@curso.getIdCurso()">@curso.getNome()</option>
+		  	  }
+		    </select>
+		  </dl>
+
+		</fieldset>
+
+        <div class="control-group">
+			<div class="actions">
+				<input type="submit" value="Gravar" class="btn btn-primary">
+				<a href="@routes.ProfessorCrud.listarProfessor()" class="btn btn-primary">
+					Cancelar
+				</a>
+			</div>
+		</div>	
+	}
+	
+
+
+</div>
+}
