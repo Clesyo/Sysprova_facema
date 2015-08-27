@@ -3,7 +3,71 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /test	                     controllers.Application.index()
+GET    /index                       controllers.Application.inicio()
+GET    /                   			 controllers.UsuarioCrud.logar()
+GET    /indexSecre                  controllers.Application.inicioSecretaria()
+GET    /indexProfe                  controllers.Application.inicioProfessor()
+GET    /indexCoord                  controllers.Application.inicioCoordenador()
+GET    /indexNucleo                  controllers.Application.inicioNucleo()
+
+
+GET    /curso                       controllers.CursoCrud.listaCurso()
+POST  /curso					    controllers.CursoCrud.gravar()
+GET   /curso/:id                    controllers.CursoCrud.detalhar(id:Long)
+POST  /curso/:id                     controllers.CursoCrud.alterar(id:Long)
+POST  /curso/:id/remover             controllers.CursoCrud.remover(id:Long)
+
+GET    /professor                   controllers.ProfessorCrud.listarProfessor()
+POST  /professor				    controllers.ProfessorCrud.gravarProfessor()
+GET   /professor/:id                controllers.ProfessorCrud.detalhar(id:Long)
+POST  /professor/:id                controllers.ProfessorCrud.alterarProfessor(id:Long)
+POST  /professor/:id/remover        controllers.ProfessorCrud.removerProfessor(id:Long)
+
+GET 	/turma						controllers.TurmaCrud.listarTurma()
+POST 	/turma						controllers.TurmaCrud.gravarTurma()
+GET		/turma/:id					controllers.TurmaCrud.detalharTurma(id:Long)
+POST	/turma/:id					controllers.TurmaCrud.alterarTurma(id:Long)
+POST 	/turma/:id/remover			controllers.TurmaCrud.removerTurma(id:Long)
+
+GET 	/disciplina					controllers.DisciplinaCrud.listarDisciplina()
+POST	/disciplina					controllers.DisciplinaCrud.gravarDisciplina()
+GET		/disciplina/:id				controllers.DisciplinaCrud.detalharDisciplina(id:Long)
+POST	/disciplina/:id				controllers.DisciplinaCrud.alterarDisciplina(id:Long)
+POST	/disciplina/:id/remover		controllers.DisciplinaCrud.removerDisciplina(id:Long)
+
+GET		/listagem					controllers.QuestaoCrud.listagem()
+POST	/listagem		        	controllers.QuestaoCrud.gravarQuestao()
+GET		/listagem/:idD/:idP				controllers.QuestaoCrud.parseId(idD:Long, idP: Long)
+
+
+GET		/usuario					controllers.UsuarioCrud.listarUsuario()
+POST    /usuario					controllers.UsuarioCrud.gravarUsuario()
+GET		/usuario/:id			    controllers.UsuarioCrud.detalhar(id:Long)
+POST	/usuario/:id				controllers.UsuarioCrud.alterarUsuario(id:Long)
+POST 	/usuario/:id/remover		controllers.UsuarioCrud.remover(id:Long)
+GET		/login					    controllers.UsuarioCrud.login()
+GET		/logar					    controllers.UsuarioCrud.logar()
+GET     /logout                     controllers.UsuarioCrud.logout()
+GET		/autenticar				 	controllers.UsuarioCrud.autenticar()
+
+GET		/prova						controllers.ProvaCrud.prova()
+POST	/prova						controllers.ProvaCrud.gravarProva()
+GET  	/gerar						controllers.ProvaCrud.gerar()
+GET  	/organizar					controllers.ProvaCrud.organizarProva(idT:Long)
+GET  	/provas					    controllers.ProvaCrud.listarTurmas()
+
+GET		/avCoord					controllers.Avaliacao.avaliacaoCoord()
+GET		/avNucleo					controllers.Avaliacao.avaliacaoNU()
+GET		/avCoord/:idD/:resp			controllers.Avaliacao.avaliarQuestaoCoord(idD:Long, resp:String)
+GET		/avNucleo/:idD/:resp		controllers.Avaliacao.avaliarQuestaoNA(idD:Long, resp:String)
+POST	/avCoord/:idQ				controllers.Avaliacao.registroObservacao(idQ:Long)
+POST	/avNucleo/:idQ				controllers.Avaliacao.registroObservacao(idQ:Long)
+GET		/funProf					controllers.Avaliacao.funcaoProf()
+GET		/corrigirQuest/:idD			controllers.Avaliacao.corrigirQuestao(idD: Long)
+GET		/listagemCorrecao			controllers.Avaliacao.listagemCorrecao()
+POST	/corrigirQuest/:idQ/:idA	controllers.QuestaoCrud.alterarQuestaoCoord(idQ:Long, idA: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
