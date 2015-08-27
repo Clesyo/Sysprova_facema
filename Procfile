@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/sysprova -Dhttp.port=$PORT DapplyEvolutions.default=true -Ddb.default.driver=com.mysql.jdbc.Driver -Ddb.default.url=${CLEARDB_DATABASE_URL}
+web: target/universal/stage/bin/sysprova -Dhttp.port=$PORT DapplyEvolutions.default=true $JAVA_OPTS -Ddb.default.driver=com.mysql.jdbc.Driver -Ddb.default.url=${CLEARDB_DATABASE_URL}
